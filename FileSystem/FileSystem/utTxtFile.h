@@ -13,7 +13,7 @@ TEST(TxtFile, getDirectoryElements) {
     try {
         TxtFile txtFile("txtFile", 25);
         txtFile.getDirectoryElements();
-    } catch (const char* exception) {
+    } catch (string exception) {
         ASSERT_EQ(exception, "Cannot get directory elements with non Directory instance");
     }
 }
@@ -22,7 +22,7 @@ TEST(TxtFile, addDirectoryElement) {
     try {
         TxtFile txtFile("txtFile", 25);
         txtFile.addDirectoryElement(&txtFile);
-    } catch (const char* exception) {
+    } catch (string exception) {
         ASSERT_EQ(exception, "Cannot add directory element with non Directory instance");
     }
 }
@@ -31,7 +31,7 @@ TEST(TxtFile, removeDirectoryElement) {
     try {
         TxtFile txtFile("txtFile", 25);
         txtFile.removeDirectoryElement(&txtFile);
-    } catch (const char* exception) {
+    } catch (string exception) {
         ASSERT_EQ(exception, "Cannot remove directory element with non Directory instance");
     }
 }

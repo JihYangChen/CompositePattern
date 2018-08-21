@@ -31,8 +31,8 @@ int main(int argc, const char * argv[]) {
         line1 -> addGraphic(line1);
         circle1 -> addGraphic(line1);
         rectangle1 -> addGraphic(line1);
-    } catch (const char* error) {
-        std::cout << error;
+    } catch (string error) {
+        std::cout << error << '\n';
     }
     
     return 0;

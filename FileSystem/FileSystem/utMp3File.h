@@ -13,7 +13,7 @@ TEST(Mp3File, getDirectoryElements) {
     try {
         Mp3File mp3File("mp3File", 248);
         mp3File.getDirectoryElements();
-    } catch (const char* exception) {
+    } catch (string exception) {
         ASSERT_EQ(exception, "Cannot get directory elements with non Directory instance");
     }
 }
@@ -22,7 +22,7 @@ TEST(Mp3File, addDirectoryElement) {
     try {
         Mp3File mp3File("mp3File", 248);
         mp3File.addDirectoryElement(&mp3File);
-    } catch (const char* exception) {
+    } catch (string exception) {
         ASSERT_EQ(exception, "Cannot add directory element with non Directory instance");
     }
 }
@@ -31,7 +31,7 @@ TEST(Mp3File, removeDirectoryElement) {
     try {
         Mp3File mp3File("mp3File", 248);
         mp3File.removeDirectoryElement(&mp3File);
-    } catch (const char* exception) {
+    } catch (string exception) {
         ASSERT_EQ(exception, "Cannot remove directory element with non Directory instance");
     }
 }
